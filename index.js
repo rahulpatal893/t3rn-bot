@@ -74,7 +74,7 @@ const CONTRACT_ADDRESS = T3RN_ABI.at(-1).CA_ARBT;
             const request = transactionData(wallet.address, amount.hex, options);
             const gasPrice = parseUnits('0.1', 'gwei'); // adjustable
 
-            // Generate a random number between 0.00002 and 0.0001 for the transaction value
+            Generate a random number between 0.00002 and 0.0001 for the transaction value
             const randomNumber = generateRandomNumber();
 
             const transaction = {
