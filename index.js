@@ -70,6 +70,13 @@ const CONTRACT_ADDRESS = T3RN_ABI.at(-1).CA_ARBT;
               );
               continue;
             }
+            const amount = await getAmount(options);
+            if (!amount) {
+              console.log(
+                ❌ Failed to get the amount. Skipping transaction...`.red
+               );
+                 continue;
+                }
 
             const request = transactionData(wallet.address, amount.hex, options);
             const gasPrice = parseUnits('0.1', 'gwei'); // adjustable
